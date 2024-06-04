@@ -17,5 +17,22 @@ Choice2 = input()
 time.sleep(0.25)
 print(Choice, "used", Choice2)
 if Choice2 == "Attack":
-  
-  print("Willow's HP is now", HP2 - 20)
+ DMG = random.randint(15,30)
+  HP2 = HP2 - DMG
+  print("Willow's HP is now", HP2)
+elif Choice2 == "Defend":
+  print("Willow's HP is now", HP2)
+time.sleep(0.25)
+P1 = random.randint(1,2)
+DMG2 = random.randint(15,30)
+if P1 > 1:
+  time.sleep(0.25)
+  print("Willow used Attack")
+  HP = HP - DMG2
+  time.sleep(0.25)
+  print(Choice,"'s HP is now", HP)
+elif P1 < 2:
+  time.sleep(0.25)
+  print("Willow used Defend")
+  time.sleep(0.25)
+  print(Choice,"'s HP is now", HP)
