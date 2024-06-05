@@ -1,5 +1,6 @@
 import math
 import time
+import random
 print("Welcome to Pythomon!")
 time.sleep(0.5)
 print("Choose your Pythomon!")
@@ -36,3 +37,11 @@ elif P1 < 2:
   print("Willow used Defend")
   time.sleep(0.25)
   print(Choice,"'s HP is now", HP)
+if HP <= 0:
+  print(Choice, "was defeated!")
+  time.sleep(0.25)
+  print("Defeat!")
+if HP2 <= 0:
+  print("Willow was defeated!")
+  time.sleep(0.25)
+  print("Victory!")
