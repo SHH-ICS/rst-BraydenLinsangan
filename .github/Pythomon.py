@@ -5,9 +5,19 @@ print("Welcome to Pythomon!")
 time.sleep(0.5)
 print("Choose your Pythomon!")
 time.sleep(0.25)
-print("1. Chonkers")
+print("1. Chonkers, 2. Ballerson, 3. Sausage")
+print()
 time.sleep(0.25)
 Choice = input("Type here ")
+if Choice.lower() == "chonkers":
+  HP = 150
+if Choice.lower() == "ballerson":
+  HP = 115
+if Choice.lower() == "sausage":
+  HP = 100
+if Choice.lower() != "chonkers" and Choice.lower() != "ballerson" and Choice.lower() != "sausage":
+  print("Invalid Choice!")
+  quit()
 print("Go,", Choice,"!")
 time.sleep(0.25)
 print("Opponent sent out Willow!")
