@@ -20,7 +20,17 @@ if Choice.lower() != "chonkers" and Choice.lower() != "ballerson" and Choice.low
   quit()
 print("Go,", Choice,"!")
 time.sleep(0.25)
-print("Opponent sent out Willow!")
+P2 = random.randint(1,3)
+if P2 == 1:
+  Choice3 = "Willow"
+  HP2 = 100
+if P2 == 2:
+  Choice3 = "Tohru"
+  HP2 = 125
+if P2 == 3:
+  Choice3 = "Taco"
+  HP2 = 115
+print("Opponent sent out", Choice3,"!")
 HP2 = 100
 time.sleep(0.25)
 print("Select a move!", "Attack or Defend!")
