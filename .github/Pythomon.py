@@ -31,36 +31,114 @@ if P2 == 3:
   Choice3 = "Taco"
   HP2 = 115
 print("Opponent sent out", Choice3,"!")
-HP2 = 100
 time.sleep(0.25)
-print("Select a move!", "Attack or Defend!")
-Choice2 = input()
-time.sleep(0.25)
-print(Choice, "used", Choice2)
-if Choice2 == "Attack":
-  DMG = random.randint(15,30)
-  HP2 = HP2 - DMG
-  print("Willow's HP is now", HP2)
-elif Choice2 == "Defend":
-  DEF = random.randint(10,20)
-  HP = HP + DEF
-  print(Choice,"'s HP is now", HP)
-time.sleep(0.25)
-P1 = random.randint(1,2)
-DMG2 = random.randint(15,30)
-if P1 > 1:
-  time.sleep(0.25)
-  print("Willow used Attack")
-  HP = HP - DMG2
-  time.sleep(0.25)
-  print(Choice,"'s HP is now", HP)
-elif P1 < 2:
-  DEF2 = random.randint(10,20)
-  time.sleep(0.25)
-  print("Willow used Defend")
-  time.sleep(0.25)
-  HP2 = HP2 + DEF2
-  print("Willows's HP is now", HP2)
+
+
+#all of while loop indented one space
+#Chonkers selected
+if Choice.lower() == "chonkers":
+  while HP > 0 and HP2 > 0:
+  #day 6 code, attacking moves and changed willow to choice3
+    print("Select a move!", "Attack or Defend!")
+    Choice2 = input()
+    time.sleep(0.25)
+    print(Choice, "used", Choice2)
+    if Choice2.lower() == "attack":
+      DMG = random.randint(15,30)
+      HP2 = HP2 - DMG
+      print(Choice3,"'s HP is now", HP2)
+    elif Choice2.lower() == "defend":
+      DEF = random.randint(10,20)
+      HP = HP + DEF
+      print(Choice,"'s HP is now", HP)
+    time.sleep(0.25)
+    P1 = random.randint(1,3)
+    DMG2 = random.randint(15,30)
+  #trying to make invalid moves not work
+    if P1 > 1:
+      time.sleep(0.25)
+      print(Choice3, "used Attack")
+      HP = HP - DMG2
+      time.sleep(0.25)
+      print(Choice,"'s HP is now", HP)
+    elif P1 < 2:
+      DEF2 = random.randint(10,20)
+      time.sleep(0.25)
+      print(Choice3, "used Defend")
+      time.sleep(0.25)
+      HP2 = HP2 + DEF2
+      print(Choice3,"'s HP is now", HP2)
+
+#^^^ Character 1 ^^^
+#VVV Character 2 VVV
+
+#Ballerson selected
+if Choice.lower() == "ballerson":
+  while HP > 0 and HP2 > 0:
+      print("Select a move!")
+      print("Hurricane or ")
+      Choice2 = input()
+      time.sleep(0.25)
+      print(Choice, "used", Choice2)
+      if Choice2.lower() == "attack":
+        DMG = random.randint(15,30)
+        HP2 = HP2 - DMG
+        print(Choice3,"'s HP is now", HP2)
+      elif Choice2.lower() == "defend":
+        DEF = random.randint(10,20)
+        HP = HP + DEF
+        print(Choice,"'s HP is now", HP)
+      time.sleep(0.25)
+      P1 = random.randint(1,3)
+      DMG2 = random.randint(15,30)
+      if P1 > 1:
+        time.sleep(0.25)
+        print(Choice3, "used Attack")
+        HP = HP - DMG2
+        time.sleep(0.25)
+        print(Choice,"'s HP is now", HP)
+      elif P1 < 2:
+        DEF2 = random.randint(10,20)
+        time.sleep(0.25)
+        print(Choice3, "used Defend")
+        time.sleep(0.25)
+        HP2 = HP2 + DEF2
+        print(Choice3,"'s HP is now", HP2)
+
+#^^^ Character 2 ^^^
+#VVV Character 3 VVV
+
+#Sausage selected
+if Choice.lower() == "sausage":
+  while HP > 0 and HP2 > 0:
+    print("Select a move!", "Attack or Defend!")
+    Choice2 = input()
+    time.sleep(0.25)
+    print(Choice, "used", Choice2)
+    if Choice2.lower() == "attack":
+      DMG = random.randint(15,30)
+      HP2 = HP2 - DMG
+      print(Choice3,"'s HP is now", HP2)
+    elif Choice2.lower() == "defend":
+      DEF = random.randint(10,20)
+      HP = HP + DEF
+      print(Choice,"'s HP is now", HP)
+    time.sleep(0.25)
+    P1 = random.randint(1,3)
+    DMG2 = random.randint(15,30)
+    if P1 > 1:
+      time.sleep(0.25)
+      print(Choice3, "used Attack")
+      HP = HP - DMG2
+      time.sleep(0.25)
+      print(Choice,"'s HP is now", HP)
+    elif P1 < 2:
+      DEF2 = random.randint(10,20)
+      time.sleep(0.25)
+      print(Choice3, "used Defend")
+      time.sleep(0.25)
+      HP2 = HP2 + DEF2
+      print(Choice3,"'s HP is now", HP2)
 if HP <= 0:
   print(Choice, "was defeated!")
   time.sleep(0.25)
