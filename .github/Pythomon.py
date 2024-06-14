@@ -1,4 +1,3 @@
-import math
 import time
 import random
 print("Welcome to Pythomon!")
@@ -11,7 +10,6 @@ print("1. Chonkers, 2. Ballerson, 3. Sausage")
 print()
 time.sleep(0.25)
 Choice = input("Type here ")
-# Initialize HP with a default value day 7
 HP = 0 
 HP2 = 0
 if Choice.lower() == "chonkers":
@@ -25,27 +23,28 @@ if Choice.lower() != "chonkers" and Choice.lower() != "ballerson" and Choice.low
   quit()
 print("Go,", Choice,"!")
 time.sleep(0.25)
-#new opponents Day 5 code
 P2 = random.randint(1,3)
 if P2 == 1:
   Choice3 = "Willow"
+  Choice4 = "Bite"
+  C5 = "Darkcharm"
   HP2 = 100
 if P2 == 2:
   Choice3 = "Tohru"
+  Choice4 = "Earthquake"
+  C5 = "Enrage"
   HP2 = 125
 if P2 == 3:
   Choice3 = "Taco"
+  Choice4 = "Uppercut"
+  C5 = "Focus"
   HP2 = 115
 print("Opponent sent out", Choice3,"!")
 time.sleep(0.25)
 
-
-#all of while loop indented one space
 #Chonkers selected
 if Choice.lower() == "chonkers":
   while HP > 0 and HP2 > 0:
-  #day 6 code, attacking moves and changed willow to choice3
-    #day 7 code changed attack and defend moves
     print("Select a move!")
     print("Tumble or Eat")
     Choice2 = input()
@@ -59,7 +58,14 @@ if Choice.lower() == "chonkers":
       DEF = random.randint(25,35)
       HP = HP + DEF
       print(Choice,"'s HP is now", HP)
+    if Choice2.lower() != "tumble" and Choice2.lower() != "eat":
+      print("It did nothing...")
     time.sleep(0.25)
+    if HP2 <= 0:
+      print(Choice3, "was defeated!")
+      time.sleep(0.25)
+      print("Victory!")
+      quit()
     P1 = random.randint(1,3)
     if P2 == 1:
       DMG2 = random.randint(15,25)
@@ -67,17 +73,21 @@ if Choice.lower() == "chonkers":
       DMG2 = random.randint(25,32)
     if P2 == 3:
       DMG2 = random.randint(20,28)
-  #trying to make invalid moves not work
     if P1 > 1:
       time.sleep(0.25)
-      print(Choice3, "used Attack")
+      print(Choice3, "used", Choice4)
       HP = HP - DMG2
       time.sleep(0.25)
       print(Choice,"'s HP is now", HP)
+    if HP <= 0:
+      print(Choice, "was defeated!")
+      time.sleep(0.25)
+      print("Defeat!")
+      quit()
     elif P1 < 2:
       DEF2 = random.randint(10,20)
       time.sleep(0.25)
-      print(Choice3, "used Defend")
+      print(Choice3, "used", C5)
       time.sleep(0.25)
       HP2 = HP2 + DEF2
       print(Choice3,"'s HP is now", HP2)
@@ -101,7 +111,14 @@ if Choice.lower() == "ballerson":
         DEF = random.randint(12,24)
         HP = HP + DEF
         print(Choice,"'s HP is now", HP)
+      if Choice2.lower() != "hurricane" and Choice2.lower() != "dewdrop":
+        print("It did nothing...")
       time.sleep(0.25)
+      if HP2 <= 0:
+        print(Choice3, "was defeated!")
+        time.sleep(0.25)
+        print("Victory!")
+        quit()
       P1 = random.randint(1,3)
       if P2 == 1:
         DMG2 = random.randint(15,25)
@@ -111,14 +128,19 @@ if Choice.lower() == "ballerson":
         DMG2 = random.randint(20,28)
       if P1 > 1:
         time.sleep(0.25)
-        print(Choice3, "used Attack")
+        print(Choice3, "used", Choice4)
         HP = HP - DMG2
         time.sleep(0.25)
         print(Choice,"'s HP is now", HP)
+      if HP <= 0:
+        print(Choice, "was defeated!")
+        time.sleep(0.25)
+        print("Defeat!")
+        quit()
       elif P1 < 2:
         DEF2 = random.randint(10,20)
         time.sleep(0.25)
-        print(Choice3, "used Defend")
+        print(Choice3, "used", C5)
         time.sleep(0.25)
         HP2 = HP2 + DEF2
         print(Choice3,"'s HP is now", HP2)
@@ -142,13 +164,9 @@ if Choice.lower() == "sausage":
       DEF = random.randint(20,30)
       HP = HP + DEF
       print(Choice,"'s HP is now", HP)
+    if Choice2.lower() != "scratch" and Choice2.lower() != "rest":
+      print("It did nothing...")
     time.sleep(0.25)
-    #day 7 added end loop over here
-    if HP <= 0:
-      print(Choice, "was defeated!")
-      time.sleep(0.25)
-      print("Defeat!")
-      quit()
     if HP2 <= 0:
       print(Choice3, "was defeated!")
       time.sleep(0.25)
@@ -163,24 +181,19 @@ if Choice.lower() == "sausage":
       DMG2 = random.randint(20,28)
     if P1 > 1:
       time.sleep(0.25)
-      print(Choice3, "used Attack")
+      print(Choice3, "used", Choice4)
       HP = HP - DMG2
       time.sleep(0.25)
       print(Choice,"'s HP is now", HP)
+    if HP <= 0:
+      print(Choice, "was defeated!")
+      time.sleep(0.25)
+      print("Defeat!")
+      quit()
     elif P1 < 2:
       DEF2 = random.randint(10,20)
       time.sleep(0.25)
-      print(Choice3, "used Defend")
+      print(Choice3, "used", C5)
       time.sleep(0.25)
       HP2 = HP2 + DEF2
       print(Choice3,"'s HP is now", HP2)
-#if HP <= 0:
-  #print(Choice, "was defeated!")
-  #time.sleep(0.25)
-  #print("Defeat!")
-  #quit()
-#if HP2 <= 0:
-  #print(Choice3, "was defeated!")
-  #time.sleep(0.25)
-  #print("Victory!")
-  #quit()
